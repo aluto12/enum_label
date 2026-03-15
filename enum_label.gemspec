@@ -10,13 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Human-readable labels for Rails enums"
   spec.description = "Easily add human-readable labels (Japanese, English, etc.) to your Rails enum attributes with a simple DSL."
-  spec.homepage = "https://github.com/aluto144/enum_label"
+  spec.homepage = "https://github.com/aluto12/enum_label"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
 
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/aluto144/enum_label"
-  spec.metadata["changelog_uri"] = "https://github.com/aluto144/enum_label/blob/main/CHANGELOG.md"
+  spec.metadata["source_code_uri"] = "https://github.com/aluto12/enum_label"
 
   gemspec = File.basename(__FILE__)
   spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|

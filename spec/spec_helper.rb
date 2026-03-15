@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-
 require "active_record"
 require "enum_label"
 
@@ -23,4 +21,8 @@ class Article < ActiveRecord::Base
   enum_label :visibility, visible: "公開", hidden: "非公開"
 end
 
-require "minitest/autorun"
+RSpec.configure do |config|
+  config.expect_with :rspec do |expectations|
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+end
